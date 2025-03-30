@@ -36,21 +36,21 @@ This example is 9.27 from [(Poole and Mackworth; 2017)]. The example describes S
 
 First create the class for Sam's dilemma. 
 
-    ``` python
-    from value_iteration import value_iteration, Markov_Decision_Process
+``` python
+from value_iteration import value_iteration, Markov_Decision_Process
 
-    sam = Markov_Decision_Process(states = ['healthy', 'sick'],
+sam = Markov_Decision_Process(states = ['healthy', 'sick'],
                               actions = ['relax', 'party'],
                               probabilities = [0.95, 0.7, 0.5, 0.1, 0.05, 0.3, 0.5, 0.9],
                               reward_values = [7, 10, 0, 2],
                               discount_factor = 0.8)
 
-    output = value_iteration(sam)
-    output
-    ```
+output = value_iteration(sam)
+output
+```
 
-        ({'healthy': 'party', 'sick': 'relax'},
-         {'healthy': 35.71428571428571, 'sick': 23.80952380952381})
+  ({'healthy': 'party', 'sick': 'relax'},
+  {'healthy': 35.71428571428571, 'sick': 23.80952380952381})
 
 The solution to the dilemma is that when Sam is healthy he should party, and when he is sick he should relax. 
     
