@@ -86,7 +86,7 @@ sam.dynamics(sam.states, sam.actions, sam.probabilities)
      ('sick', ('sick', 'party')): 0.9}
 
 
-I chose to use the list structure so that the package is standalone and independent of other packages, for example numpy and its arrays, and as there is no native matrix datastructure in Python. The user does not need to write out or specify all the state-action pairs or keys of the dynamics dictionary as these are generated within the class. 
+I chose to use the list structure so that the package is stand-alone using base pythonic constructs independent of other packages, for example numpy and its arrays, as this makes the code more reusable and resilient to external changes or deprecation. The user does not need to write out or specify all the state-action pairs or keys of the dynamics dictionary, as these are conveniently generated within the class. 
 
 
 ## GitHub Repository
