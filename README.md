@@ -61,6 +61,31 @@ In this implementation we create a class for a Markov decision process. On creat
 
 The order of the reward values list can be thought of as the order one would read a matrix of these values indexed by states as rows and actions as columns, that is: from left to right in rows from top row to bottom row. The list is then a flattened version of this imagined matrix. The order of the transition probabilities is the same except there is an imagined matrix for each target state, and these are read in the order already imposed on the states.
 
+For an example of how this order affects the dictionary internal to the Markov_Decision_Process class, see below.
+
+``` python
+sam.rewards(sam.states, sam.actions, sam.reward_values)
+```
+
+    {('healthy', 'relax'): 7,
+    ('healthy', 'party'): 10,
+    ('sick', 'relax'): 0,
+    ('sick', 'party'): 2}
+
+``` python
+sam.dynamics(sam.states, sam.actions, sam.probabilities)
+```
+
+    {('healthy', ('healthy', 'relax')): 0.95,
+     ('healthy', ('healthy', 'party')): 0.7,
+     ('healthy', ('sick', 'relax')): 0.5,
+     ('healthy', ('sick', 'party')): 0.1,
+     ('sick', ('healthy', 'relax')): 0.05,
+     ('sick', ('healthy', 'party')): 0.3,
+     ('sick', ('sick', 'relax')): 0.5,
+     ('sick', ('sick', 'party')): 0.9}
+
+
 I chose to use the list structure so that the package is standalone and independent of other packages, for example numpy and its arrays, and as there is no native matrix datastructure in Python. The user does not need to write out or specify all the state-action pairs or keys of the dynamics dictionary as these are generated within the class. 
 
 
