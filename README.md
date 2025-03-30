@@ -36,7 +36,7 @@ This example is 9.27 from [(Poole and Mackworth; 2017)]. The example describes S
 
 First create the class for Sam's dilemma. 
 
-    ```python
+    ``` python
     from value_iteration import value_iteration, Markov_Decision_Process
 
     sam = Markov_Decision_Process(states = ['healthy', 'sick'],
