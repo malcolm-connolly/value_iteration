@@ -49,8 +49,8 @@ output = value_iteration(sam)
 output
 ```
 
-  ({'healthy': 'party', 'sick': 'relax'},
-  {'healthy': 35.71428571428571, 'sick': 23.80952380952381})
+    ({'healthy': 'party', 'sick': 'relax'},
+    {'healthy': 35.71428571428571, 'sick': 23.80952380952381})
 
 The solution to the dilemma is that when Sam is healthy he should party, and when he is sick he should relax. 
     
